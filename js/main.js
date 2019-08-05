@@ -3,22 +3,112 @@ window.onload = function(){
 }
 data = [
     {
+        title:"Coochbehar, East India",
+        image:"assets/images/rajbari.jpg",
+        text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
+        knownFor:["Raj Bari","Sagar Dighi"],
+        region: "east india",
+        theme: ["family","budhet"],
+        activities: ["trekking","adventures"],
+        btv: ["June, February, March",'jfm'],
+        popularity: ["mustVisit"],
+        places: ["andaman","delhi"],
+        lowPrice: ["5000"],
+        highPrice: ["6000"],
+        duration: ["10"]
+    },
+    {
+        title:"Agra, Delhi",
+        image:"assets/images/tajmahal.jpg",
+        text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
+        knownFor:["Taj Mahal","Agra Fort"],
+        region: "North india",
+        theme: ["honeymoon","family"],
+        activities: ["trekking","adventures"],
+        btv: ["June, February, March",'jfm'],
+        popularity: ["yourcall"],
+        places: ["goa","delhi","manali"],
+        lowPrice: ["15000"],
+        highPrice: ["20000"],
+        duration: ["26"]
+    },
+    {
         title:"Agra, Delhi",
         image:"assets/images/test-image.jpg",
         text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
         knownFor:["Taj Mahal","Agra Fort"],
-        region: "west india",
-        theme: ["honeymoon","beach"],
+        region: "North india",
+        theme: ["honeymoon","family"],
+        activities: ["trekking","adventures"],
+        btv: ["June, February, March",'jfm'],
+        popularity: ["yourcall"],
+        places: ["goa","delhi","manali"],
+        lowPrice: ["15000"],
+        highPrice: ["20000"],
+        duration: ["26"]
+    },
+    {
+        title:"Coochbehar, East India",
+        image:"assets/images/rajbari.jpg",
+        text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
+        knownFor:["Raj Bari","Sagar Dighi"],
+        region: "east india",
+        theme: ["family","budhet"],
         activities: ["trekking","adventures"],
         btv: ["June, February, March",'jfm'],
         popularity: ["mustVisit"],
-        places: ["goa","delhi"],
-        lowPrice: ["15000"],
-        highPrice: ["20000"],
+        places: ["andaman","delhi"],
+        lowPrice: ["5000"],
+        highPrice: ["6000"],
         duration: ["10"]
     },
     {
-        title:"Suman, Delhi",
+        title:"Coochbehar, East India",
+        image:"assets/images/rajbari.jpg",
+        text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
+        knownFor:["Raj Bari","Sagar Dighi"],
+        region: "east india",
+        theme: ["family","budhet"],
+        activities: ["trekking","adventures"],
+        btv: ["June, February, March",'jfm'],
+        popularity: ["mustVisit"],
+        places: ["andaman","delhi"],
+        lowPrice: ["5000"],
+        highPrice: ["6000"],
+        duration: ["10"]
+    },
+    {
+        title:"Coochbehar, East India",
+        image:"assets/images/rajbari.jpg",
+        text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
+        knownFor:["Raj Bari","Sagar Dighi"],
+        region: "east india",
+        theme: ["family","budhet"],
+        activities: ["trekking","adventures"],
+        btv: ["June, February, March",'jfm'],
+        popularity: ["mustVisit"],
+        places: ["andaman","delhi"],
+        lowPrice: ["5000"],
+        highPrice: ["6000"],
+        duration: ["10"]
+    },
+    {
+        title:"Coochbehar, East India",
+        image:"assets/images/rajbari.jpg",
+        text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
+        knownFor:["Raj Bari","Sagar Dighi"],
+        region: "east india",
+        theme: ["family","budhet"],
+        activities: ["trekking","adventures"],
+        btv: ["June, February, March",'jfm'],
+        popularity: ["mustVisit"],
+        places: ["andaman","delhi"],
+        lowPrice: ["5000"],
+        highPrice: ["6000"],
+        duration: ["10"]
+    },
+    {
+        title:"Agra, Delhi",
         image:"assets/images/test-image.jpg",
         text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
         knownFor:["Taj Mahal","Agra Fort"],
@@ -49,7 +139,7 @@ data = [
     },
     {
         title:"Agra, Delhi",
-        image:"assets/images/test-image.jpg",
+        image:"assets/images/tajmahal.jpg",
         text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
         knownFor:["Taj Mahal","Agra Fort"],
         region: "North india",
@@ -63,8 +153,23 @@ data = [
         duration: ["26"]
     },
     {
-        title:"Sachin, Delhi",
-        image:"assets/images/test-image.jpg",
+        title:"Agra, Delhi",
+        image:"assets/images/tajmahal.jpg",
+        text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
+        knownFor:["Taj Mahal","Agra Fort"],
+        region: "North india",
+        theme: ["honeymoon","family"],
+        activities: ["trekking","adventures"],
+        btv: ["June, February, March",'jfm'],
+        popularity: ["yourcall"],
+        places: ["goa","delhi","manali"],
+        lowPrice: ["15000"],
+        highPrice: ["20000"],
+        duration: ["26"]
+    },
+    {
+        title:"Agra, Delhi",
+        image:"assets/images/tajmahal.jpg",
         text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
         knownFor:["Taj Mahal","Agra Fort"],
         region: "North india",
@@ -108,7 +213,7 @@ function createElement(elData,plate){
             text += ' | ';
         }
     }
-    text += '<br/><br/>'+elData.text+'<br/><br/><strong>Best Time : </strong>'+elData.btv[0]+'<br/><br/><strong>Package : </strong>'+elData.lowPrice+' - '+elData.highPrice+'</p>';
+    text += '<br/><br/>'+elData.text+'<br/><br/><strong>Best Time : </strong>'+elData.btv[0]+'<br/><br/><strong>Package : </strong><span class = "text-budget">'+elData.lowPrice+' - '+elData.highPrice+'</span></p>';
     text += '<button type="button" onclick = "test()" class="btn btn btn-outline-primary px-4">Details</button>\
     <button type="button" class="btn btn btn-success px-4">Buy Package</button>';
     body.innerHTML = text;
@@ -127,6 +232,7 @@ function renderElement(data){
     let product = document.getElementById('products');
     product.innerHTML = '';
     
+    document.getElementById('rFound').innerText = data.length;
     for(j = 0; j < data.length ;j++){
         let row = document.createElement("div");
         row.setAttribute('class','row mt-3');
@@ -140,6 +246,7 @@ function renderElement(data){
                 break;
             }
         }j--;
+        console.log(data.length);
         product.appendChild(row);
     }
     // setTimeout(show,1000);

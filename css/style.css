@@ -8,7 +8,7 @@ body{
     cursor: pointer;
 }
 .text-blue{
-    color:#6197C6;
+    color:#4834DF;
 }
 .hide{
     visibility: hidden;
@@ -20,3 +20,15 @@ body{
     opacity: 1;
     transition: visibility 0s linear 0s, opacity 300ms;
 }
+.list-color{
+    color:#333945;
+}
+.bg-list{
+    background-color:#F7F7F7;
+    border-left:6px solid #586776;
+    padding:7px 5px;
+}
+.text-budget{
+    color:#FF7900;
+}
+
