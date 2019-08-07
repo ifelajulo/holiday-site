@@ -1,5 +1,6 @@
 window.onload = function(){
     renderElement(data);
+    addCheckboxEvent();
 }
 data = [
     {
@@ -19,7 +20,7 @@ data = [
     },
     {
         title:"Agra, Delhi",
-        image:"assets/images/tajmahal.jpg",
+        image:"assets/images/tajmahal.jpeg",
         text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
         knownFor:["Taj Mahal","Agra Fort"],
         region: "North india",
@@ -36,7 +37,7 @@ data = [
         title:"Agra, Delhi",
         image:"assets/images/test-image.jpg",
         text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
-        knownFor:["Taj Mahal","Agra Fort"],
+        knownFor:["Light House","Peace"],
         region: "North india",
         theme: ["honeymoon","family"],
         activities: ["trekking","adventures"],
@@ -111,7 +112,7 @@ data = [
         title:"Agra, Delhi",
         image:"assets/images/test-image.jpg",
         text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
-        knownFor:["Taj Mahal","Agra Fort"],
+        knownFor:["Light House","Peace"],
         theme: ["honeymoon","luxury"],
         region: "North india",
         activities: ["trekking"],
@@ -126,7 +127,7 @@ data = [
         title:"Agra, Delhi",
         image:"assets/images/test-image.jpg",
         text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
-        knownFor:["Taj Mahal","Agra Fort"],
+        knownFor:["Light House","Peace"],
         theme: ["honeymoon","family"],
         region: "North india",
         activities: ["trekking","adventures"],
@@ -139,7 +140,7 @@ data = [
     },
     {
         title:"Agra, Delhi",
-        image:"assets/images/tajmahal.jpg",
+        image:"assets/images/tajmahal.jpeg",
         text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
         knownFor:["Taj Mahal","Agra Fort"],
         region: "North india",
@@ -154,7 +155,7 @@ data = [
     },
     {
         title:"Agra, Delhi",
-        image:"assets/images/tajmahal.jpg",
+        image:"assets/images/tajmahal.jpeg",
         text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
         knownFor:["Taj Mahal","Agra Fort"],
         region: "North india",
@@ -169,7 +170,7 @@ data = [
     },
     {
         title:"Agra, Delhi",
-        image:"assets/images/tajmahal.jpg",
+        image:"assets/images/tajmahal.jpeg",
         text:"Lorem, ipsum dolor sit amet consectetur adipisicing elit, iste nesciunt voluptate sed id.",
         knownFor:["Taj Mahal","Agra Fort"],
         region: "North india",
@@ -194,6 +195,7 @@ function createElement(elData,plate){
     else{
         card.setAttribute('class','card pb-3');
     }
+    card.classList.add("animated", "fadeIn");
     card.setAttribute('style',"width:18.3rem;");
     let header = document.createElement("h5");
     header.setAttribute('class',"card-header");
@@ -233,6 +235,9 @@ function renderElement(data){
     product.innerHTML = '';
     
     document.getElementById('rFound').innerText = data.length;
+    if(data.length == 0){
+        product.innerHTML = "<div class = 'text-center animated flash mt-5' style = 'font-size:2rem;color:#586776'>No Result Found</div>";
+    }
     for(j = 0; j < data.length ;j++){
         let row = document.createElement("div");
         row.setAttribute('class','row mt-3');
@@ -441,4 +446,11 @@ function duration(data,id){
         }
     }
     return temp;
+}
+
+function addCheckboxEvent(){
+    boxes = document.querySelectorAll('input[type=checkbox]');
+    for(i = 0; i< boxes.length; i++){
+        boxes[i].addEventListener('click',function(e){filter();});
+    }
 }
